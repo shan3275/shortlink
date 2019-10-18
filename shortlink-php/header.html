@@ -1,0 +1,17 @@
+<div style="padding:0 100px;height:70px;line-height:70px;background-color:black">
+	<span class="fl" style="font-size:150%;font-weight:bold">XXL动态短链接</span>
+	<span class="fr">
+<?php
+	session_start();
+	if(empty($_SESSION['user'])){
+?>
+	<a href="register.php">注册</a>
+	<a href="login.php" style="margin-left:25px">登录</a>
+<?php
+	}else{
+		echo $_SESSION['user'];
+?>
+	<a href="single.php?action=logout" style="margin-left:25px">退出登录</a>
+<?php } ?>
+	</span>
+</div>
